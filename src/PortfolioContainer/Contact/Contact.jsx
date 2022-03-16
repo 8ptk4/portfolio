@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Contact.css";
+import { faMapLocation, faMobile } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Contact = () => {
   return (
@@ -7,29 +9,23 @@ const Contact = () => {
       <h6>05.</h6>
       <h3>Contact</h3>
 
-      <div className="container about__container">
-        <div className="about__me">
-          <div className="about__me-image">
-            <img src="https://avatars.githubusercontent.com/u/26345032?v=4" />
+      <div className="container contact__container">
+        <form>
+          <div className="contact__me">
+            <label for="heh">Message</label>
+            <textarea" id="heh" name="heh"></textarea>
           </div>
-        </div>
 
-        <div className="content about__content">
-          <h4>
-            asdasdasd kiasdj asd asodn asodn asnd asoid aijsd
-            asd oaisnd oiansd oasind onasdoi nasodmn apsmd pmasdm
-          </h4>
-          <p>
-            My name is <b>Patrik Karlsson</b>,
-          </p>
-          <p>
-            Esse pariatur nulla cillum minim veniam quis labore ea ullamco. Veniam sunt labore minim sint nostrud laborum adipisicing fugiat sunt sunt. Ex commodo ut Lorem id nisi mollit. In veniam sunt deserunt minim labore. Culpa sint elit sit duis cillum.
-          </p>
+          <div className="content contact__content">
+            <label for="heh">Name</label>
+            <input type="text" id="heh" name="heh"></input>
+            <label for="heh">Email</label>
+            <input type="text" id="heh" name="heh"></input>
+            <label for="heh">Subject</label>
+            <input type="text" id="heh" name="heh"></input>
+          </div>
 
-          <button className='btn primary-btn'>
-            Contact Me
-          </button>
-        </div>
+        </form>
       </div>
     </section>
   )

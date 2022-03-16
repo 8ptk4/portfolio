@@ -1,0 +1,61 @@
+.contact__me {
+    border: 1px solid blue;
+    background: red;
+}
+
+.contact__container > form {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 4%;
+}
+
+.contact__content {
+    /* margin: 2rem 0 2.6rem; */
+    padding: 0 2rem;
+    color: var(--color);
+}
+
+
+/* Media query - Medium devices  */
+@media screen and (max-width: 1024px) {
+    .contact__container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact__me {
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+
+    .contact__content p {
+        margin: 1rem 0 1.5rem;
+    }
+}
+
+  /* Media query - Small devices */
+  @media screen and (max-width: 600px) {
+    .contact__me {
+      width: 65%;
+      margin: 0 auto
+    }
+  
+    .contact__content {
+      text-align: center;
+    }
+  
+    .contact__content p {
+      margin: 1.5rem 0;
+    }
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+
+
