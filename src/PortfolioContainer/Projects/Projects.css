@@ -1,0 +1,182 @@
+.projects__container {
+  display: grid;
+  grid-template-columns: 46% 46%;
+  gap: 4%;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 4rem;
+}
+
+.projects__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.projects__content-desc {
+  color: var(--secondaryColor);
+}
+
+.hejhej {
+  display: flex;
+  font-size: 5rem;
+  justify-content: flex-end;
+}
+
+.projects__container-skills {
+  justify-content: space-evenly;
+}
+
+.projects__content-skills {
+  display: flex;
+  flex-direction: row;
+}
+
+.projects__content-skills > span {
+  padding-right: 1em;
+  font-size: .9rem;
+  color: var(--accent);
+  font-family: 'Roboto Mono', monospace;
+}
+
+.projects__content-skills > span:before {
+  font-size: .3rem;
+  content: ":> ";
+}
+
+picture > img {
+  width: 100%;
+}
+
+.apa {
+  margin: 1rem 0 1.5rem;
+}
+
+/* Media query - Medium devices  */
+@media screen and (max-width: 1024px) {
+  .projects__container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .projects__content p {
+    margin: 1rem 0 1.5rem;
+  }
+
+  .apa {
+    margin: 1rem 0 1.5rem;
+  }
+}
+
+/* Media query - Small devices */
+@media screen and (max-width: 600px) {
+  .projects__content {
+    text-align: center;
+  }
+
+  .projects__content p {
+    margin: 1.5rem 0;
+  }
+}
+
+.card {
+  color: white;
+  height: 15rem;
+  border: 0;
+
+}
+
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+
+
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+.project {
+  height: 100%;
+  top: 100%;
+  background-color: var(--cardColor);
+  padding: .5rem;
+}
+
+.project:hover {
+  background-color: var(--cardColorHover);
+}
+
+.toggle__grid {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.toggle__grid > p {
+  cursor: pointer;
+  color: var(--accent);
+}
+
+.toggle__grid > p:hover {
+  cursor: pointer;
+  color: rosybrown;
+  transition: var(--transition);
+}
+
+
+.toggle__grid-expand {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.random__project__images {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 2.5rem;
+}
+
+.random__project__images > .image {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: url("https://cdn.vox-cdn.com/uploads/chorus_asset/file/22661965/img19.jpg");
+  background-position: "center";
+  background-size: 2.5rem 2.5rem;
+  background-repeat: "no-repeat";
+  margin: .1rem 0;
+}
+
+.random__project__images > .image:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.project__icons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.project__icons-icon {
+  font-size: 3rem !important;
+  margin: .5rem;
+  color: var(--accent);
+}
+
+.project__icons-icon:hover {
+  color: white;
+  cursor: pointer;
+}

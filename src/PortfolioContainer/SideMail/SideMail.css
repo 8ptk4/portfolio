@@ -1,0 +1,34 @@
+.side-mail-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  right: -3rem;
+  z-index: 3;
+}
+
+.side-mail {
+  transform: rotate(90deg);
+  margin-bottom: 7.5rem;
+  margin-left: .5rem;
+}
+
+.side-mail-line {
+  width: 2px;
+  height: 45vh;
+  margin-top: 10px;
+  background-color: #3f5168;
+}
+
+.side-mail a {
+  color: #3f5168;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.side-mail a:hover {
+  color: var(--accent);
+}

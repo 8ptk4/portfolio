@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: 0;
+  text-decoration: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+  --transition: all 900ms ease;
+}
+
+.darkmode {
+  --background: #0B0C10;
+  --accent: #66FCF1;
+  --color: #C5C6C7;
+  --secondaryColor: #3f5168;
+  --cardColor: rgba(20,50,48,.7);
+  --cardColorHover: rgba(20,50,48,.3);
+}
+
+.lightmode {
+  --background: #ffffff;
+  --accent: #ff0055;
+  --color: #3E3E3E;
+  --secondaryColor: gray;
+  --cardColor: rgba(255,255,255,.7);
+  --cardColorHover: rgba(255,255,255,.3);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.Layout {
+  background-color: var(--background) !important;
+}
+
+
+/* General Styles */
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+section {
+  margin-top: 8rem;
+}
+
+section > h3,
+section > h6 {
+  text-align: center;
+  color: var(--accent);
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1.4rem;
+}
+
+.projects__content-title > h7 {
+  color: var(--accent);
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1.4rem;
+}
+
+.projects__content-title > h5 {
+  color: var(--color);
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1.4rem;
+}
+
+
+section > h3 {
+  color: #C5C6C7;
+  margin-bottom: 4rem;
+}
+
+section > h3:before, h3:after {
+  background-color: var(--accent);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 3rem;
+  margin: 1rem;
+}
+
+.content > p {
+  color: #3f5168;
+}
+
+a {
+  color: var(--accent);
+  transition: var(--transition);
+}
+
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--accent);
+  padding: 0.75rem 1.2rem;
+  margin-right: 0.8rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--accent);
+
+  font-size: 14px;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: #111;
+  border-color: transparent;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--color);
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+footer {
+  width: 100%;
+  height: 70px;
+}
+
+/* Media Query - Medium devices  */
+@media screen and (max-width: 1024px) {
+
+  .container {
+    width: var(--container-width-md);
+  }
+
+  section {
+    margin-top: 6rem;
+  }
+
+}
+
+
+
+/* Media Query - Hamburger */
+@media screen and (max-width: 829px) {
+
+  .header-nav {
+    display: none;
+  }
+
+}
+
+
+/* Media query - Small devices */
+@media screen and (max-width: 600px) {
+
+  .container {
+    width: var(--container-width-sm)
+  }
+
+  section > h2 {
+    margin-bottom: 2rem;
+  }
+
+}

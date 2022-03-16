@@ -1,0 +1,141 @@
+.presentation {
+  margin: 0px auto;
+  display: flex;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  margin-top: -85px;
+  width: 70vw !important;
+  height: 100vh;
+}
+
+.presentation__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote {
+  font-style: italic;
+}
+
+.presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.presentation-details {
+  width: 100%;
+}
+
+.presentation-name-pre span {
+  font-family: 'Roboto Mono', monospace;
+  text-align: left;
+  color: var(--accent);
+}
+
+.presentation-name span {
+  text-align: left;
+  font-size: clamp(3rem, 5.5vw, 6rem);
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  color: #C5C6C7;
+}
+
+.presentation-carousel {
+  font-size: clamp(1.5rem, 4.2vw, 4rem);
+  margin: 0;
+  color: #3f5168;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.profile-details-role {
+  display: flex;
+  flex-direction: column;
+  margin: 14px 0 24px 0;
+}
+
+.profile-details-role h1 {
+  font-size: 40px;
+  font-family: cursive;
+}
+
+.profile-role-tagline {
+  font-size: 19px;
+  margin: 5px 0 0 0;
+  color: #3f5168;
+}
+
+.profile-options {
+  justify-content: start;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.presentation-img {
+  width: 400px;
+  border-radius: 25%;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  margin-left: 20px;
+}
+
+.presentation-img picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 45px;
+}
+
+
+@media screen and (max-width: 1185px) {
+  .social-icons {
+    display: none;
+  }
+
+  .side-mail-wrapper {
+    display: none;
+  }
+
+
+  main {
+    padding: 0px 75px;
+  }
+}
+
+.presentation-img {
+	position:relative;
+  border: 2px solid var(--accent);
+}
+
+.presentation-img:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--accent);
+  opacity: 0.2;
+  border-radius: 45px;
+}
+
+.apa:hover {
+  display: none;
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 10em !important;
+}

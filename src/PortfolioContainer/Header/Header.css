@@ -1,0 +1,71 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 50px 0 50px;
+  font-family: 'Roboto Mono', monospace;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--background);
+}
+
+.header-logo span {
+  display: inline-block;
+  margin-right: -10px;
+}
+
+.header-logo-initial {
+  font-size: 40px;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  color: var(--color);
+}
+
+.header-logo-latter {
+  font-size: 40px;
+  color: var(--color);
+}
+
+.header-nav ul {
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav ul li {
+  display: inline;
+  margin: 20px;
+  font-size: 14px;
+}
+
+.header-nav ul li a {
+  text-decoration: none;
+}
+
+.header_nav_item_number {
+  color: var(--accent);
+}
+
+.header_nav_item_name {
+  color: var(--color);
+}
+
+.header-nav ul li a:hover > .header_nav_item_name {
+  color: var(--accent);
+}
+
+.MuiSwitch-colorPrimary {
+  color: var(--accent) !important;
+}
+
+.MuiSwitch-track {
+  background-color: var(--accent) !important;
+}
+
+
+
