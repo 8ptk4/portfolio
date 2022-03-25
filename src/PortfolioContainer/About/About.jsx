@@ -6,7 +6,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const About = () => {
   return (
-    <section id="about">
+    <section id="anchor-about">
       <h6>02.</h6>
       <h3>About Me</h3>
 

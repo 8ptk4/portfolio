@@ -1,8 +1,6 @@
 import React from 'react'
 import './Header.css'
 import Switch from '@mui/material/Switch';
-import { useState } from 'react';
-
 
 export default function Header(props) {
   const label = { inputProps: { 'aria-label': 'Toggle' } };
@@ -16,7 +14,7 @@ export default function Header(props) {
       <div className="header-nav" >
         <ul>
           <li>
-            <a href="#">
+            <a href="#anchor-home">
               <span className='header_nav_item_number'>01. </span>
               <span className='header_nav_item_name'>Home</span>
             </a>
@@ -34,7 +32,7 @@ export default function Header(props) {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#anchor-contact">
               <span className='header_nav_item_number'>05. </span>
               <span className='header_nav_item_name'>Contact</span>
             </a>

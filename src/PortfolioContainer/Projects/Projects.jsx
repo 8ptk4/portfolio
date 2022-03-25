@@ -162,7 +162,7 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects">
+    <section id="anchor-projects">
       <h6>03.</h6>
       <h3>Projects</h3>
 

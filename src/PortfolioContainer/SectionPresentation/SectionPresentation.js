@@ -17,7 +17,7 @@ const SectionPresentation = () => {
   }, []);
 
   return (
-    <section className="presentation">
+    <section id="anchor-home" className="presentation">
       <div className='section__container presentation__container'>
         <div className='presentation-details'>
 
