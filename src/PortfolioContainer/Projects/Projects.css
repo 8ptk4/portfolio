@@ -36,11 +36,8 @@
   font-size: .9rem;
   color: var(--accent);
   font-family: 'Roboto Mono', monospace;
-}
-
-.projects__content-skills > span:before {
-  font-size: .3rem;
-  content: ":> ";
+  align-items: center;
+  display: flex;
 }
 
 picture > img {

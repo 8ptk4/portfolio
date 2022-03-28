@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Projects.css";
 import { faGithubAlt, faCodepen } from "@fortawesome/free-brands-svg-icons";
+import { faCompressArrowsAlt } from "@fortawesome/free-solid-svg-icons";
+
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+
+<i class="fa-solid fa-arrows-to-dot"></i>
 
 const initFeaturedProject = (projs) => {
   return(
@@ -33,7 +37,7 @@ const initFeaturedProject = (projs) => {
             <div className="projects__content">
               <img src={x.imgUrl} />
               <div className="projects__content-skills">
-                { x.tech.map(x => (<span>{x}</span>))}
+                { x.tech.map(x => (<span><FontAwesomeIcon icon={faCompressArrowsAlt} style={{fontSize: ".4rem", paddingRight: "5px"}} />{x}</span>))}
               </div>
             </div>
           </div>
@@ -154,10 +158,10 @@ const Projects = () => {
     setRandProjToShow(6)
   }
 
-  function fis(background, index) {
-    const hej = document.getElementsByClassName('card');
+  const changeBackground = (background, index) => {
+    const container = document.getElementsByClassName('card');
 
-    hej[index].style.backgroundImage = `url(${background})`;
+    container[index].style.backgroundImage = `url(${background})`;
   }
 
   return (
@@ -166,7 +170,6 @@ const Projects = () => {
       <h3>Projects</h3>
 
       { initFeaturedProject(featuredProj) } 
-
 
       <div className="container cards">
         {allRandomProj.slice(0, randProjToShow).map((hej, index) =>
@@ -190,7 +193,7 @@ const Projects = () => {
                         className="image" 
                         style={{backgroundImage: "url(" + x + ")"}}
                         onClick={() => {
-                          fis(x, index);
+                          changeBackground(x, index);
                         }}
                       />
                     ))
