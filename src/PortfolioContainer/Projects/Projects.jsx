@@ -21,7 +21,7 @@ const initFeaturedProject = (projs) => {
                 <h5>{x.title}</h5>
               </div>
               <div>
-                <p className="projects__content-desc" style={{color: "!important"}}>
+                <p className="projects__content-desc">
                   {x.description}
                 </p>
               </div>
@@ -166,7 +166,7 @@ const Projects = () => {
 
   return (
     <section id="anchor-projects">
-      <h6>03.</h6>
+      <h6>04.</h6>
       <h3>Projects</h3>
 
       { initFeaturedProject(featuredProj) } 

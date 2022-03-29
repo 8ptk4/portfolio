@@ -26,8 +26,14 @@ export default function Header(props) {
             </a>
           </li>
           <li>
-            <a href="#anchor-projects">
+            <a href="#anchor-skills">
               <span className='header_nav_item_number'>03. </span>
+              <span className='header_nav_item_name'>skills</span>
+            </a>
+          </li>
+          <li>
+            <a href="#anchor-projects">
+              <span className='header_nav_item_number'>04. </span>
               <span className='header_nav_item_name'>Projects</span>
             </a>
           </li>
