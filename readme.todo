@@ -1,5 +1,7 @@
 
 Portfolio:
+    ☐ Localstorage themeselector
+
     Projects:
         ✔ Random Projects show initialy 6 projects, with the option to show more / less @done(22-03-28 13:37)
         ☐ The "pinkish" accent color doesnt apply that well within the cards.
@@ -11,4 +13,7 @@ Portfolio:
 
     Resume:
         ☐ Create resume latex for both dark and light theme?
+    
+    
+
   
