@@ -48,7 +48,7 @@ export default function Header(props) {
 
       <div className="header-resume">
         <Switch
-          onClick={() => props.changeTheme(true)}
+          onClick={() => props.changeTheme()}
           {...label}
           defaultChecked
           color={'primary'}

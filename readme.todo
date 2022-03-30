@@ -2,6 +2,12 @@
 Portfolio:
     ☐ Localstorage themeselector
 
+    Header:
+        ✔ Dark/Light theme global state in localstorage @done(22-03-30 23:12)
+
+    Presentation:
+        ☐ flex -> Grid and fix responsiveness
+
     Projects:
         ✔ Random Projects show initialy 6 projects, with the option to show more / less @done(22-03-28 13:37)
         ☐ The "pinkish" accent color doesnt apply that well within the cards.
