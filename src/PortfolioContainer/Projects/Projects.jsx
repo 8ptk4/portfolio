@@ -169,10 +169,10 @@ const Projects = () => {
       <h6>04.</h6>
       <h3>Projects</h3>
 
-      { initFeaturedProject(featuredProj) } 
+      { initFeaturedProject(featuredProj) }
 
       <div className="container cards">
-        {allRandomProj.slice(0, randProjToShow).map((hej, index) =>
+        { allRandomProj.slice(0, randProjToShow).map((hej, index) =>
             <div className="card" style={{
               backgroundImage: "url(" + backgrund + ")",
               backgroundPosition: 'center',
@@ -187,17 +187,14 @@ const Projects = () => {
                   <FontAwesomeIcon icon={faCodepen} className="project__icons-icon"/>
                 </div>
                 <div className="random__project__images">
-                  { 
-                    hej.images.map(x => (
-                      <div 
-                        className="image" 
-                        style={{backgroundImage: "url(" + x + ")"}}
-                        onClick={() => {
-                          changeBackground(x, index);
-                        }}
-                      />
-                    ))
-                  }
+                  { hej.images.map(x => (
+                    <div
+                      className="image"
+                      style={{ backgroundImage: "url(" + x + ")" }}
+                      onMouseOver={() => { changeBackground(x, index); }}
+                      onMouseOut={() => { changeBackground(hej.images[0], index); }}
+                    />
+                  )) }
                 </div>
               </div>
             </div>
@@ -212,7 +209,7 @@ const Projects = () => {
           </p>
           : 
           <p className="toggle__grid-expand" onClick={showLess}>
-                        <ExpandLessIcon />
+            <ExpandLessIcon />
             Show Less 
           </p>
       }

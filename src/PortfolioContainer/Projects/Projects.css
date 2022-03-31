@@ -137,7 +137,7 @@ picture > img {
 
 .random__project__images {
   position: absolute;
-  right: 0;
+  right: .2rem;
   top: 0;
   display: flex;
   justify-content: center;
@@ -157,7 +157,7 @@ picture > img {
 }
 
 .random__project__images > .image:hover {
-  border: 1px solid white;
+  outline: 1px solid var(--accent);
   cursor: pointer;
 }
 

@@ -1,9 +1,8 @@
 
 Portfolio:
-    ☐ Localstorage themeselector
-
     Header:
         ✔ Dark/Light theme global state in localstorage @done(22-03-30 23:12)
+        ☐ Make the Dark/Light switch stand out more
 
     Presentation:
         ☐ flex -> Grid and fix responsiveness
@@ -11,6 +10,8 @@ Portfolio:
     Projects:
         ✔ Random Projects show initialy 6 projects, with the option to show more / less @done(22-03-28 13:37)
         ☐ The "pinkish" accent color doesnt apply that well within the cards.
+        ✔ Change card img previews to be onmouseover instead of onclick, make it so it defaults to original img on onmouseout @done(22-03-31 17:04)
+        ☐ Look into some sort of transition on onmouseover/out
     
     Contact:
         ☐ Style or not style?
@@ -18,8 +19,8 @@ Portfolio:
         ☐ Add captcha?
 
     Resume:
-        ☐ Create resume latex for both dark and light theme?
-    
+        ☐ Polish resume and attach it as downloadable file.
+
     
 
   
