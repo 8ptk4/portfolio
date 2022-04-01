@@ -5,64 +5,55 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowTurnUp } from "@fortawesome/free-solid-svg-icons";
 import './Header.css'
 
+const navItem = (anchor, number, section) => {
+  return(
+    <>
+      <li>
+        <a href={anchor}>
+          <span className='header__nav-number'>{number}</span>
+          <span className='header__nav-name'>{section}</span>
+        </a>
+      </li>
+    </>
+  )
+}
+
 const Header = (props) => {
   const [dayOrNight, setDayOrNight] = useState(JSON.parse(localStorage.getItem("theme")) ? "sun" : "night");
 
   return (
     <div className="header">
-      <div className="header-logo">
-        <span className='header-logo-initial'>P</span>
-        <span className='header-logo-latter'>K</span>
+      <div className="header__logo">
+        <span className='header__logo-initial'>P</span>
+        <span className='header__logo-latter'>K</span>
       </div>
-      <div className="header-nav" >
+      <div className="header__nav" >
         <ul>
-          <li>
-            <a href="#anchor-home">
-              <span className='header_nav_item_number'>01. </span>
-              <span className='header_nav_item_name'>Home</span>
-            </a>
-          </li>
-          <li>
-            <a href="#anchor-about" >
-              <span className='header_nav_item_number'>02. </span>
-              <span className='header_nav_item_name'>About</span>
-            </a>
-          </li>
-          <li>
-            <a href="#anchor-skills">
-              <span className='header_nav_item_number'>03. </span>
-              <span className='header_nav_item_name'>skills</span>
-            </a>
-          </li>
-          <li>
-            <a href="#anchor-projects">
-              <span className='header_nav_item_number'>04. </span>
-              <span className='header_nav_item_name'>Projects</span>
-            </a>
-          </li>
-          <li>
-            <a href="#anchor-contact">
-              <span className='header_nav_item_number'>05. </span>
-              <span className='header_nav_item_name'>Contact</span>
-            </a>
-          </li>
+
+          { navItem("#anchor-home",     "01. ", "Home") }
+          { navItem("#anchor-about",    "02. ", "About") }
+          { navItem("#anchor-skills",   "03. ", "Skills") }
+          { navItem("#anchor-projects", "04. ", "Projects") }
+          { navItem("#anchor-contact",  "05. ", "Contact") }
+
         </ul>
       </div>
 
-      <div className="header-resume">
-        <span className="theme__icon" onClick={() => {
+      <div className="header__theme">
+        <span onClick={() => {
           props.changeTheme();
           JSON.parse(localStorage.getItem("theme")) ? setDayOrNight("night") : setDayOrNight("sun");
         }}>
-          { dayOrNight == "sun" ? <LightModeIcon /> : <DarkModeIcon /> }
+          { dayOrNight == "sun" ?
+            <LightModeIcon className="header__theme-icon" /> :
+            <DarkModeIcon className="header__theme-icon" />
+          }
         </span>
 
-        <div style={{ position: "absolute", top: "75px", right: "56px" }}>
-          <div style={{ display: "flex" }}>
-            <div className="theme__text" style={{ fontSize: ".7rem", margin: "9px 11px", width: "130px"}}>You can click here to change the color of the page! </div>
-            <div>
-              <FontAwesomeIcon className="theme__text" icon={faArrowTurnUp} />
-            </div>
+        <div className="header__theme__secondary">
+          <div className="header__theme__secondary-animation">
+            <div className="header__theme__secondary-text">You can click here to change the color of the page! </div>
+            <FontAwesomeIcon className="header__theme__secondary-arrow" icon={faArrowTurnUp} />
           </div>
         </div>
       </div>
