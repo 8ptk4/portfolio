@@ -2,7 +2,8 @@
 Portfolio:
     Header:
         ✔ Dark/Light theme global state in localstorage @done(22-03-30 23:12)
-        ☐ Make the Dark/Light switch stand out more
+        ✔ Make the Dark/Light switch stand out more @done(22-04-01 22:38)
+        ☐ Make header hide scrolling down, and show on scroll up
 
     Presentation:
         ☐ flex -> Grid and fix responsiveness

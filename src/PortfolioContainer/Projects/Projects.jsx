@@ -49,15 +49,9 @@ const initFeaturedProject = (projs) => {
 
 const Projects = () => {
   const [featuredProj, setFeaturedProj] = useState([]);
-  
-  // All random projects
   const [randProjToShow, setRandProjToShow] = useState(6);
-
   const [backgrund, setBackgrund] = useState("https://cdn.vox-cdn.com/uploads/chorus_asset/file/22661965/img19.jpg");
   
-
-
-
   useEffect(() => {
     setFeaturedProj([
       {

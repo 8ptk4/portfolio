@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowTurnUp } from "@fortawesome/free-solid-svg-icons";
 import './Header.css'
-import Switch from '@mui/material/Switch';
 
-export default function Header(props) {
-  const label = { inputProps: { 'aria-label': 'Toggle' } };
+const Header = (props) => {
+  const [dayOrNight, setDayOrNight] = useState(JSON.parse(localStorage.getItem("theme")) ? "sun" : "night");
 
   return (
     <div className="header">
@@ -47,13 +50,24 @@ export default function Header(props) {
       </div>
 
       <div className="header-resume">
-        <Switch
-          onClick={() => props.changeTheme()}
-          {...label}
-          defaultChecked
-          color={'primary'}
-        />
+        <span className="theme__icon" onClick={() => {
+          props.changeTheme();
+          JSON.parse(localStorage.getItem("theme")) ? setDayOrNight("night") : setDayOrNight("sun");
+        }}>
+          { dayOrNight == "sun" ? <LightModeIcon /> : <DarkModeIcon /> }
+        </span>
+
+        <div style={{ position: "absolute", top: "75px", right: "56px" }}>
+          <div style={{ display: "flex" }}>
+            <div className="theme__text" style={{ fontSize: ".7rem", margin: "9px 11px", width: "130px"}}>You can click here to change the color of the page! </div>
+            <div>
+              <FontAwesomeIcon className="theme__text" icon={faArrowTurnUp} />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
 }
+
+export default Header
