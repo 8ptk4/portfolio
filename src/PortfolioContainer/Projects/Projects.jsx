@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./Projects.css";
 import { faGithubAlt, faCodepen } from "@fortawesome/free-brands-svg-icons";
 import { faCompressArrowsAlt } from "@fortawesome/free-solid-svg-icons";
-
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-
-<i class="fa-solid fa-arrows-to-dot"></i>
+import "./Projects.css";
 
 const initFeaturedProject = (projs) => {
   return(

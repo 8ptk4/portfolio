@@ -19,7 +19,7 @@ const navItem = (anchor, number, section) => {
 }
 
 const Header = (props) => {
-  const [dayOrNight, setDayOrNight] = useState(JSON.parse(localStorage.getItem("theme")) ? "sun" : "night");
+  const [dayOrNight, setDayOrNight] = useState();
 
   return (
     <div className="header">
@@ -29,13 +29,11 @@ const Header = (props) => {
       </div>
       <div className="header__nav" >
         <ul>
-
           { navItem("#anchor-home",     "01. ", "Home") }
           { navItem("#anchor-about",    "02. ", "About") }
           { navItem("#anchor-skills",   "03. ", "Skills") }
           { navItem("#anchor-projects", "04. ", "Projects") }
           { navItem("#anchor-contact",  "05. ", "Contact") }
-
         </ul>
       </div>
 
