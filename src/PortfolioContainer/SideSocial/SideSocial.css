@@ -26,3 +26,18 @@
   margin-top: 10px;
   background-color: #3f5168;
 }
+
+/* Media query - Medium devices  */
+@media screen and (max-width: 1024px) {
+  .social-icons {
+    left: 1rem;
+  }
+
+}
+
+/* Media query - Small devices */
+@media screen and (max-width: 600px) {
+  .social-icons{
+    display: none;
+  }
+}

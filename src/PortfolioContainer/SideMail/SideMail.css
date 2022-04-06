@@ -32,3 +32,18 @@
 .side-mail a:hover {
   color: var(--accent);
 }
+
+/* Media query - Medium devices  */
+@media screen and (max-width: 1024px) {
+  .side-mail-wrapper {
+    right: -6rem;
+  }
+
+}
+
+/* Media query - Small devices */
+@media screen and (max-width: 600px) {
+  .side-mail-wrapper {
+    display: none;
+  }
+}

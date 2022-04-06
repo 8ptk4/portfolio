@@ -17,105 +17,52 @@ const SectionPresentation = () => {
   }, []);
 
   return (
-
-
-    // <section id="anchor-home" className="presentation">
-    //   <div className='container presentation__container'>
-    //     <div className='presentation-details'>
-
-    //       <div className='presentation-name-pre'>
-    //         <span>Hi, my name is</span>
-    //       </div>
-
-    //       <div className='presentation-name'>
-    //         <span>Patrik Karlsson</span>
-    //       </div>
-
-    //       <div className='presentation-carousel'>
-    //         <TypeAnimation
-    //           cursor={true}
-    //           className='presentation-carousel'
-    //           sequence={['Web Designer', 1500, 'Front End Developer', 1500, 'Open For Work', 1500]}
-    //           wrapper="h2"
-    //           repeat={Infinity}
-    //         />
-    //       </div>
-
-    //       <div className='profile-details-role'>
-    //         <span className='primary-text'>
-    //           <span className='profile-role-tagline'>
-    //             <span className="quote">{ quote.text }</span> - { quote.author }
-    //           </span>
-    //         </span>
-    //       </div>
-
-    //       <div className='profile-options'>
-    //         <button className='btn primary-btn'>
-    //           Contact Me
-    //         </button>
-    //         <button className='btn primary-btn'>
-    //           Dowload Resume
-    //         </button>
-    //       </div>
-    //     </div>
-    //     <div className="presentation-img">
-    //       <picture>
-    //         <img src="https://avatars.githubusercontent.com/u/26345032?v=4" />
-    //       </picture>
-    //     </div>
-    //   </div>
-    //   <div>
-    //     <ArrowDropDownIcon className="arrow-down" />
-    //   </div>
-    // </section>
-
-    <section id="anchor-home">
+    <section id="anchor-home" className="presentation">
       <div className="container presentation__container">
         <div className="content presentation__content">
-            <div className='presentation-details'>
 
-       <div className='presentation-name-pre'>
-         <span>Hi, my name is</span>
-</div>
-       <div className='presentation-name'>         <span>Patrik Karlsson</span>       </div>
+          <span className="presentation__content-intro">Hi, my name is</span>
+          <span className="presentation__content-name">Patrik Karlsson</span>
 
-       <div className='presentation-carousel'>
-        <TypeAnimation
-          cursor={true}
-          className='presentation-carousel'
-          sequence={['Web Designer', 1500, 'Front End Developer', 1500, 'Open For Work', 1500]}
-          wrapper="h2"
-          repeat={Infinity}
-        />
-      </div>
+          <TypeAnimation
+            cursor={true}
+            className='presentation__content-carousel'
+            sequence={[
+              'Web Designer', 1500,
+              'Front End Developer', 1500,
+              'Open For Work', 1500
+            ]}
+            wrapper="h2"
+            repeat={Infinity}
+          />
 
-      <div className='profile-details-role'>
-<span className='primary-text'>
-           <span className='profile-role-tagline'>
-             <span className="quote">{ quote.text }</span> - { quote.author }
-           </span>
-         </span>
-       </div>
+          <div className='profile-details-role'>
+            <span className='primary-text'>
+              <span className='profile-role-tagline'>
+                <span className="quote">{ quote.text }</span> - { quote.author }
+              </span>
+            </span>
+          </div>
 
-       <div className='profile-options'>
-         <button className='btn primary-btn'>
-           Contact Me
-         </button>
-         <button className='btn primary-btn'>
-           Dowload Resume
-         </button>
-       </div>
-     </div>
-        </div>
-        <div className="about__me">
-          <div className="about__me-image">
-            <img src="https://avatars.githubusercontent.com/u/26345032?v=4" />
+
+          <div className='profile-options'>
+            <button className='btn primary-btn'>Contact Me</button>
+            <button className='btn primary-btn'>Dowload Resume</button>
           </div>
         </div>
 
+        <div className="about__me">
+          <div className="about__me-image">
+            <picture>
+              <img src="https://avatars.githubusercontent.com/u/26345032?v=4" />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div>
+        <ArrowDropDownIcon className="arrow-down" />
       </div>
     </section>
-
   )
 }
 

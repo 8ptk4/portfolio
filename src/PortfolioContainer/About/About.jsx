@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import "./About.css";
-import TypeAnimation from 'react-type-animation';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-
 
 const About = () => {
   return (
