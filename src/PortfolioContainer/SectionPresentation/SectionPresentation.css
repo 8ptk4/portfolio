@@ -11,6 +11,7 @@
   grid-template-columns: 55% 35%;
   gap: 10%;
   padding-bottom: 85px;
+  align-items: center;
 }
 
 .presentation__content {
@@ -80,7 +81,6 @@
 
 /* Media query - Medium devices  */
 @media screen and (max-width: 1024px) {
-
   .presentation__container {
     grid-template-columns: 1fr;
     gap: 0;
