@@ -27,7 +27,7 @@ const Header = (props) => {
         <span className='header__logo-initial'>P</span>
         <span className='header__logo-latter'>K</span>
       </div>
-      <div className="header__nav" >
+      <div className="header__nav">
         <ul>
           { navItem("#anchor-home",     "01. ", "Home") }
           { navItem("#anchor-about",    "02. ", "About") }
@@ -36,6 +36,13 @@ const Header = (props) => {
           { navItem("#anchor-contact",  "05. ", "Contact") }
         </ul>
       </div>
+
+
+      <button className="nav-toggle" onClick={() => {
+        console.log("hejsan fäll ut menyn för faen")
+      }}>
+        <span className="hamburger"></span>
+      </button>
 
       <div className="header__theme">
         <span onClick={() => {

@@ -162,18 +162,6 @@ footer {
 
 }
 
-
-
-/* Media Query - Hamburger */
-@media screen and (max-width: 829px) {
-
-  .header-nav {
-    display: none;
-  }
-
-}
-
-
 /* Media query - Small devices */
 @media screen and (max-width: 600px) {
 
