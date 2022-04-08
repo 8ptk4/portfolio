@@ -161,6 +161,10 @@
     display: block;
  }
 
+ .header__theme__secondary {
+    display: none;
+ }
+
  .header__logo {
    padding-right: 50px;
    display: flex;
