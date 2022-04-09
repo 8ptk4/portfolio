@@ -6,14 +6,10 @@ export const useScroll = () => {
     document.body.getBoundingClientRect()
   );
 
-  const [scrollY, setScrollY] = useState(bodyOffset.top);
-  const [scrollX, setScrollX] = useState(bodyOffset.left);
   const [scrollDirection, setScrollDirection] = useState();
 
   const listener = e => {
     setBodyOffset(document.body.getBoundingClientRect());
-    setScrollY(-bodyOffset.top);
-    setScrollX(bodyOffset.left);
     setScrollDirection(lastScrollTop > -bodyOffset.top ? "down" : "up");
     setLastScrollTop(-bodyOffset.top);
   };
@@ -26,8 +22,6 @@ export const useScroll = () => {
   });
 
   return {
-    scrollY,
-    scrollX,
     scrollDirection
   };
 }

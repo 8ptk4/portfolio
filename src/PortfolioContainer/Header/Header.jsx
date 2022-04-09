@@ -23,10 +23,18 @@ const navItem = (anchor, number, section) => {
 const Header = (props) => {
   const [dayOrNight, setDayOrNight] = useState();
 
-  const { y, x, scrollDirection } = useScroll();
+  const { scrollDirection } = useScroll();
 
   return (
-    <div className="header" style={scrollDirection === "down" ? {visibility: 'visible', transition: 'all 0.5s'}:{visibility: 'hidden', transition: 'all 0.5s', transform: 'translateY(-100%)'}}>
+    <div className="header" style={
+      scrollDirection ? (scrollDirection === "down"
+      ?
+      {visibility: 'visible', transition: 'all 0.5s'}
+      :
+      {visibility: 'hidden', transition: 'all 0.5s', transform: 'translateY(-100%)'})
+      : null
+      }
+      >
       <div className="header__logo">
         <span className='header__logo-initial'>P</span>
         <span className='header__logo-latter'>K</span>
