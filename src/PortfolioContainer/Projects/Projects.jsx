@@ -165,7 +165,7 @@ const Projects = () => {
       <div className="container cards">
         { allRandomProj.slice(0, randProjToShow).map((hej, index) =>
             <div className="card" style={{
-              backgroundImage: "url(" + backgrund + ")",
+              backgroundImage: `url(${backgrund})`,
               backgroundPosition: 'center',
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat'

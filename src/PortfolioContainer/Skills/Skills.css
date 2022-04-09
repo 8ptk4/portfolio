@@ -1,60 +1,177 @@
-.about__container {
-  display: grid;
-  grid-template-columns: 35% 50%;
-  gap: 15%;
-}
-
-.about__me {
-  width: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 2rem;
-  background: linear-gradient(45deg, transparent, var(--accent), transparent);
-  display: grid;
-  place-items: center;
-}
-
-.about__me-image {
-  border-radius: 2rem;
-  overflow: hidden;
-  transform: rotate(10deg);
-  transition: var(--transition);
-}
-
-.about__me-image:hover {
-  transform: rotate(0);
-}
-
-.about__content {
-  margin: 2rem 0 2.6rem;
-  color: var(--color);
-}
-
 /* Media query - Medium devices  */
 @media screen and (max-width: 1024px) {
-
-  .about__container {
+  .projects__container {
     grid-template-columns: 1fr;
     gap: 0;
   }
 
-  .about__me {
-    width: 50%;
-    margin: 2rem auto 4rem;
+  .projects__content p {
+    margin: 1rem 0 1.5rem;
   }
 
-  .about__content p {
+  .apa {
     margin: 1rem 0 1.5rem;
   }
 }
 
 /* Media query - Small devices */
 @media screen and (max-width: 600px) {
-  .about__me {
-    width: 65%;
-    margin: 0 auto
-  }
-
-  .about__content p {
+  .projects__content p {
     margin: 1.5rem 0;
   }
+}
+
+
+
+
+.skill {
+  height: 100%;
+  top: 100%;
+  background-color: var(--cardColor);
+  padding: .5rem;
+  z-index: 90;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill:hover {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.skill-title {
+  padding: 15px;
+  background: rgba(0,0,0,.4);
+  color: white;
+  text-shadow:
+  0.07em 0 black,
+  0 0.07em black,
+  -0.07em 0 black,
+  0 -0.07em black;
+}
+
+.toggle__grid {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.toggle__grid > p {
+  cursor: pointer;
+  color: var(--accent);
+}
+
+.toggle__grid > p:hover {
+  cursor: pointer;
+  color: rosybrown;
+  transition: var(--transition);
+}
+
+.toggle__grid-expand {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.random__project__images > .image {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: url("https://cdn.vox-cdn.com/uploads/chorus_asset/file/22661965/img19.jpg");
+  background-position: "center";
+  background-size: 2.5rem 2.5rem;
+  background-repeat: "no-repeat";
+  margin: .1rem 0;
+}
+
+.random__project__images > .image:hover {
+  outline: 1px solid var(--accent);
+  cursor: pointer;
+}
+
+.project__icons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.project__icons-icon {
+  font-size: 3rem !important;
+  margin: .5rem;
+  color: var(--accent);
+}
+
+.project__icons-icon:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.skill-card {
+  position: relative;
+  color: white;
+  height: 10rem;
+  border: 0;
+  overflow: hidden;
+}
+
+.skill-cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .skill-cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .skill-cards { grid-template-columns: repeat(4, 1fr); }
+}
+
+.skill-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+.skill__icons-icon {
+  font-size: 10rem !important;
+  color: rgba(255,255,255, .2);
+}
+
+.skillbar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 2rem;
+  background: gray;
+}
+
+.skill-level {
+  top: 0;
+  position: absolute;
+  font-size: .9rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: white;
+  text-shadow:
+  0.07em 0 red,
+  0 0.07em red,
+  -0.07em 0 red,
+  0 -0.07em red;
 }

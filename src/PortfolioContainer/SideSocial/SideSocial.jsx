@@ -6,7 +6,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import "./SideSocial.css";
 
-function SideSocial() {
+const SideSocial = () => {
   return (
     <div className="social-icons">
       <div className="social-icon">

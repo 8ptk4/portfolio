@@ -24,18 +24,18 @@ const Contact = () => {
         <form onSubmit={send}>
           <div className="container contact__container">
             <div className="content contact__content">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required></input>
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required></input>
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required></input>
+              {/* <label for="name">Name</label> */}
+              <input type="text" id="name" name="name" placeholder="-> Name" required></input>
+              {/* <label for="email">Email</label> */}
+              <input type="email" id="email" name="email" placeholder="Email" required></input>
+              {/* <label for="subject">Subject</label> */}
+              <input type="text" id="subject" name="subject" placeholder="Subject" required></input>
               <button className="mainBtn btn">Send</button>
             </div>
 
             <div className="contact__me contact__content">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Write something.." required></textarea>
+              {/* <label for="message">Message</label> */}
+              <textarea id="message" name="message" placeholder="Message" required></textarea>
               <button type="submit" className="secondaryBtn btn">Send</button>
             </div>
           </div>

@@ -69,15 +69,24 @@ input[type=number],
 textarea,
 select,
 button {
-  width: 100%;
+  /* width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  resize: vertical;
+  resize: vertical; */
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid var(--accent);
+  background: transparent;
+  color: var(--color);
 }
+
 
 textarea {
   height: calc(100% - 35px);

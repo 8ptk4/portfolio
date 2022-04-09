@@ -46,7 +46,9 @@ const SectionPresentation = () => {
 
 
           <div className='profile-options'>
-            <button className='btn primary-btn'>Contact Me</button>
+            <a href="#anchor-contact">
+              <button className='btn primary-btn'>Contact Me</button>
+            </a>
             <button className='btn primary-btn'>Dowload Resume</button>
           </div>
         </div>

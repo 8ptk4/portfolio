@@ -31,7 +31,7 @@
   --accent: #ff0055;
   --color: #3E3E3E;
   --secondaryColor: gray;
-  --cardColor: rgba(255,255,255,.7);
+  --cardColor: rgba(62, 38, 65, 0.7);
   --cardColorHover: rgba(255,255,255,.3);
 }
 
@@ -42,7 +42,6 @@ html {
 .Layout {
   background-color: var(--background) !important;
 }
-
 
 /* General Styles */
 .container {

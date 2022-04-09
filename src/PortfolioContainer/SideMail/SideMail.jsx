@@ -1,7 +1,7 @@
 import React from 'react'
 import "./SideMail.css"
 
-function SideMail() {
+const SideMail = () => {
   return (
     <div className="side-mail-wrapper">
       <div className="side-mail">
