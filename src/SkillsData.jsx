@@ -9,44 +9,44 @@ import {
 
 const projectsData = [
   {
-    title: "CSS3",
+    skill: "CSS3",
     icon: faCss3,
-    skill: "54%",
+    level: "54%",
   },
   {
-    title: "HTML5",
+    skill: "HTML5",
     icon: faHtml5,
-    skill: "35%",
+    level: "35%",
   },
   {
-    title: "PHP",
+    skill: "PHP",
     icon: faPhp,
-    skill: "90%",
+    level: "90%",
   },
   {
-    title: "JavaScript",
+    skill: "JavaScript",
     icon: faNodeJs,
-    skill: "82%",
+    level: "82%",
   },
   {
-    title: "React",
+    skill: "React",
     icon: faReact,
-    skill: "60%",
+    level: "60%",
   },
   {
-    title: "Angular",
+    skill: "Angular",
     icon: faAngular,
-    skill: "20%",
+    level: "20%",
   },
   {
-    title: "Vue",
+    skill: "Vue",
     icon: faHtml5,
-    skill: "30%",
+    level: "30%",
   },
   {
-    title: "asdsad",
+    skill: "asdsad",
     icon: faHtml5,
-    skill: "90%",
+    level: "90%",
   },
 ];
 

@@ -102,6 +102,7 @@ const Projects = () => {
   };
 
   const changeBackground = (background, index) => {
+    console.log(background, index);
     const container = document.getElementsByClassName("card");
 
     container[index].style.backgroundImage = `url(${background})`;
@@ -115,9 +116,9 @@ const Projects = () => {
       {initFeaturedProject(featuredProj)}
 
       <div className="container cards">
-        {projectsData.slice(0, randProjToShow).map((hej, i) => (
+        {projectsData.slice(0, randProjToShow).map((project, proj) => (
           <div
-            key={i}
+            key={proj}
             className="card"
             style={{
               backgroundImage: `url(${backgrund})`,
@@ -128,7 +129,7 @@ const Projects = () => {
           >
             <div className="projects__content-title project">
               <h6>Random Project</h6>
-              <h5>{hej.title}</h5>
+              <h5>{project.title}</h5>
               <div className="project__icons">
                 <FontAwesomeIcon
                   icon={faGithubAlt}
@@ -140,16 +141,16 @@ const Projects = () => {
                 />
               </div>
               <div className="random__project__images">
-                {hej.images.map((image, i) => (
+                {project.images.map((image, i) => (
                   <div
                     key={i}
                     className="image"
                     style={{ backgroundImage: "url(" + image + ")" }}
                     onMouseOver={() => {
-                      changeBackground(image, i);
+                      changeBackground(image, proj);
                     }}
                     onMouseOut={() => {
-                      changeBackground(hej.images[0], i);
+                      changeBackground(project.images[0], proj);
                     }}
                   />
                 ))}

@@ -1,27 +1,29 @@
 
 Portfolio:
+  ☐ Overhaul colors, right now the light theme doesnt work so well, look into some color palettes.
     Header:
-        ✔ Dark/Light theme global state in localstorage @done(22-03-30 23:12)
-        ✔ Make the Dark/Light switch stand out more @done(22-04-01 22:38)
-        ☐ Make header hide scrolling down, and show on scroll up
+      ✔ Dark/Light theme global state in localstorage @done(22-03-30 23:12)
+      ✔ Make the Dark/Light switch stand out more @done(22-04-01 22:38)
+      ✔ Make header hide scrolling down, and show on scroll up @done(22-04-10 23:41)
 
     Presentation:
-        ☐ flex -> Grid and fix responsiveness
+      ✔ flex -> Grid and fix responsiveness @done(22-04-10 23:41)
 
     Projects:
-        ✔ Random Projects show initialy 6 projects, with the option to show more / less @done(22-03-28 13:37)
-        ☐ The "pinkish" accent color doesnt apply that well within the cards.
-        ✔ Change card img previews to be onmouseover instead of onclick, make it so it defaults to original img on onmouseout @done(22-03-31 17:04)
-        ☐ Look into some sort of transition on onmouseover/out
+      ✔ Random Projects show initialy 6 projects, with the option to show more / less @done(22-03-28 13:37)
+      ☐ The "pinkish" accent color doesnt apply that well within the cards.
+      ✔ Change card img previews to be onmouseover instead of onclick, make it so it defaults to original img on onmouseout @done(22-03-31 17:04)
+      ✔ Look into some sort of transition on onmouseover/out @done(22-04-10 23:41)
+      ☐ Featured project skills, make it work togeather with Skills view.
+      ☐ Someway to show skills in the random project cards.
     
     Contact:
-        ☐ Style or not style?
-        ☐ Validate serialize form fields?
-        ☐ Add captcha?
+      ✔ Style or not style? testing styled @done(22-04-10 23:41)
+      ☐ Validate serialize form fields?
+      ☐ Add captcha?
 
     Resume:
-        ☐ Polish resume and attach it as downloadable file.
+      ☐ Polish resume and attach it as downloadable file.
 
-    
-
-  
+    Skills:
+      ☐ Try sorting projects under each skill which include the skill. And make some sort of main way showing em, different from the projects view. Modal or div expander, maybe.
