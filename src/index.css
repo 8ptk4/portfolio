@@ -74,7 +74,7 @@ section > h6 {
   line-height: 1.4rem;
 }
 
-.projects__content-title > h7 {
+.projects__content-title > h6 {
   color: var(--accent);
   font-family: 'Roboto Mono', monospace;
   line-height: 1.4rem;

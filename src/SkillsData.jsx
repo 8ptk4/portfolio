@@ -1,4 +1,11 @@
-import { faHtml5, faPhp, faCss3, faNodeJs, faReact, faAngular } from "@fortawesome/free-brands-svg-icons";
+import {
+  faHtml5,
+  faPhp,
+  faCss3,
+  faNodeJs,
+  faReact,
+  faAngular,
+} from "@fortawesome/free-brands-svg-icons";
 
 const projectsData = [
   {

@@ -1,55 +1,56 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 import "./SectionPresentation.css";
-import TypeAnimation from 'react-type-animation';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import TypeAnimation from "react-type-animation";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const SectionPresentation = () => {
   const [quote, setQuote] = useState({});
 
   useEffect(() => {
     fetch("https://type.fit/api/quotes")
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      setQuote(data[Math.round((Math.random() * Math.abs(data.length)))]);
-    });
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setQuote(data[Math.round(Math.random() * Math.abs(data.length))]);
+      });
   }, []);
 
   return (
     <section id="anchor-home" className="presentation">
       <div className="container presentation__container">
         <div className="content presentation__content">
-
           <span className="presentation__content-intro">Hi, my name is</span>
           <span className="presentation__content-name">Patrik Karlsson</span>
 
           <TypeAnimation
             cursor={true}
-            className='presentation__content-carousel'
+            className="presentation__content-carousel"
             sequence={[
-              'Web Designer', 1500,
-              'Front End Developer', 1500,
-              'Open For Work', 1500
+              "Web Designer",
+              1500,
+              "Front End Developer",
+              1500,
+              "Open For Work",
+              1500,
             ]}
             wrapper="h2"
             repeat={Infinity}
           />
 
-          <div className='profile-details-role'>
-            <span className='primary-text'>
-              <span className='profile-role-tagline'>
-                <span className="quote">{ quote.text }</span> - { quote.author }
+          <div className="profile-details-role">
+            <span className="primary-text">
+              <span className="profile-role-tagline">
+                <span className="quote">{quote.text}</span> - {quote.author}
               </span>
             </span>
           </div>
 
-
-          <div className='profile-options'>
+          <div className="profile-options">
             <a href="#anchor-contact">
-              <button className='btn primary-btn'>Contact Me</button>
+              <button className="btn primary-btn">Contact Me</button>
             </a>
-            <button className='btn primary-btn'>Dowload Resume</button>
+            <button className="btn primary-btn">Dowload Resume</button>
           </div>
         </div>
 
@@ -65,7 +66,7 @@ const SectionPresentation = () => {
         <ArrowDropDownIcon className="arrow-down" />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SectionPresentation
+export default SectionPresentation;

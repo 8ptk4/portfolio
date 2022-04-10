@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import "./About.css";
 
 const About = () => {
@@ -16,23 +16,24 @@ const About = () => {
 
         <div className="content about__content">
           <h4>
-            asdasdasd kiasdj asd asodn asodn asnd asoid aijsd
-            asd oaisnd oiansd oasind onasdoi nasodmn apsmd pmasdm
+            asdasdasd kiasdj asd asodn asodn asnd asoid aijsd asd oaisnd oiansd
+            oasind onasdoi nasodmn apsmd pmasdm
           </h4>
           <p>
             My name is <b>Patrik Karlsson</b>,
           </p>
           <p>
-            Esse pariatur nulla cillum minim veniam quis labore ea ullamco. Veniam sunt labore minim sint nostrud laborum adipisicing fugiat sunt sunt. Ex commodo ut Lorem id nisi mollit. In veniam sunt deserunt minim labore. Culpa sint elit sit duis cillum.
+            Esse pariatur nulla cillum minim veniam quis labore ea ullamco.
+            Veniam sunt labore minim sint nostrud laborum adipisicing fugiat
+            sunt sunt. Ex commodo ut Lorem id nisi mollit. In veniam sunt
+            deserunt minim labore. Culpa sint elit sit duis cillum.
           </p>
 
-          <button className='btn primary-btn'>
-            Contact Me
-          </button>
+          <button className="btn primary-btn">Contact Me</button>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

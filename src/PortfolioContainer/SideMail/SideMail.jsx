@@ -1,5 +1,5 @@
-import React from 'react'
-import "./SideMail.css"
+import React from "react";
+import "./SideMail.css";
 
 const SideMail = () => {
   return (
@@ -9,9 +9,9 @@ const SideMail = () => {
           <span>putte.karlsson@gmail.com</span>
         </a>
       </div>
-      <div className='side-mail-line'></div>
+      <div className="side-mail-line" />
     </div>
-  )
-}
+  );
+};
 
-export default SideMail
+export default SideMail;

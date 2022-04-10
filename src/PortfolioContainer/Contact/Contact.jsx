@@ -1,47 +1,74 @@
-import React from 'react';
-import emailjs from 'emailjs-com';
+import React from "react";
+import emailjs from "emailjs-com";
 import "./Contact.css";
-import { faMapLocation, faMobile } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Contact = () => {
-  function send(e) {
+  const send = (e) => {
     e.preventDefault();
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+      .then(
+        (res) => {
+          console.log(res.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
 
-    emailjs.sendForm('service_77tqm1l', 'template_2qzqkmq', e.target, 'Fv0AEgPoFcYgr2esW')
-      .then((res) => {
-        console.log(res.text);
-      }, (error) => {
-        console.log(error.text);
-      });
-      e.target.reset();
-  }
   return (
     <section id="anchor-contact">
       <h6>05.</h6>
       <h3>Contact</h3>
-
-        <form onSubmit={send}>
-          <div className="container contact__container">
-            <div className="content contact__content">
-              {/* <label for="name">Name</label> */}
-              <input type="text" id="name" name="name" placeholder="-> Name" required></input>
-              {/* <label for="email">Email</label> */}
-              <input type="email" id="email" name="email" placeholder="Email" required></input>
-              {/* <label for="subject">Subject</label> */}
-              <input type="text" id="subject" name="subject" placeholder="Subject" required></input>
-              <button className="mainBtn btn">Send</button>
-            </div>
-
-            <div className="contact__me contact__content">
-              {/* <label for="message">Message</label> */}
-              <textarea id="message" name="message" placeholder="Message" required></textarea>
-              <button type="submit" className="secondaryBtn btn">Send</button>
-            </div>
+      <form onSubmit={send}>
+        <div className="container contact__container">
+          <div className="content contact__content">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Subject"
+              required
+            />
+            <button className="mainBtn btn">Send</button>
           </div>
-        </form>
-    </section>
-  )
-}
 
-export default Contact
+          <div className="contact__me contact__content">
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Message"
+              required
+            />
+            <button type="submit" className="secondaryBtn btn">
+              Send
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+  );
+};
+
+export default Contact;
