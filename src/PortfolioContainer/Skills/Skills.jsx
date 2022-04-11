@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import skillsData from "../../SkillsData";
-// import projectsData from "../../ProjectsData";
+import projectsData from "../../ProjectsData";
 
 const Skills = () => {
   const [skillsToShow, setSkillsToShow] = useState(5);
@@ -16,10 +16,6 @@ const Skills = () => {
   const showLess = () => {
     setSkillsToShow(5);
   };
-
-  // const getProjsInSkill = () => {
-
-  // };
 
   return (
     <section id="anchor-skills">
@@ -40,7 +36,15 @@ const Skills = () => {
                   height: "100%",
                 }}
               >
-                <span className="skill-title">hjejhej</span>
+                {projectsData.forEach((project) => {
+                  if (project.skills.includes(skill.skill)) {
+                    console.log(skill + "includes " + skill.skill);
+                  }
+                })}
+
+        {/* {Array.isArray(obj.applicants) && obj.applicants.map(obj2 =>
+           <div className="events">{obj2.person.name}</div>
+        )} */}
               </div>
             </div>
             <div className="skill-icons">

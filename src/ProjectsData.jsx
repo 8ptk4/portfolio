@@ -11,7 +11,7 @@ const projectsData = [
 
   {
     title: "LinkedIN",
-    skills: [],
+    skills: ["HTML5"],
     url: "https://i.redd.it/7ppvb8uyrjj61.jpg",
     images: [
       "https://cdn.vox-cdn.com/uploads/chorus_asset/file/22661965/img19.jpg",
