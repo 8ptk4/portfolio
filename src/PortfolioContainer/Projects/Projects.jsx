@@ -102,7 +102,6 @@ const Projects = () => {
   };
 
   const changeBackground = (background, index) => {
-    console.log(background, index);
     const container = document.getElementsByClassName("card");
 
     container[index].style.backgroundImage = `url(${background})`;

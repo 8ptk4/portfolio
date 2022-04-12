@@ -17,6 +17,24 @@ const Skills = () => {
     setSkillsToShow(5);
   };
 
+  const getAmountOfProjects = (skill) => {
+    let amount = 0;
+    projectsData.map((project) => {
+      if (project.skills.includes(skill)) {
+        amount++;
+      }
+    });
+    return amount;
+  };
+
+  const getProject = (skill) => {
+    projectsData.map((project) => {
+      if (project.skills.includes(skill)) {
+        console.log(project);
+      }
+    });
+  };
+
   return (
     <section id="anchor-skills">
       <h6>03.</h6>
@@ -24,7 +42,13 @@ const Skills = () => {
 
       <div className="container skill-cards">
         {skillsData.slice(0, skillsToShow).map((skill, i) => (
-          <div key={i} className="skill-card">
+          <div
+            key={i}
+            className="skill-card"
+            onClick={() => {
+              getProject(skill.skill);
+            }}
+          >
             <div className="projects__content-title skill">
               <h6>{skill.skill}</h6>
               <div
@@ -36,15 +60,15 @@ const Skills = () => {
                   height: "100%",
                 }}
               >
-                {projectsData.forEach((project) => {
-                  if (project.skills.includes(skill.skill)) {
-                    console.log(skill + "includes " + skill.skill);
-                  }
-                })}
-
-        {/* {Array.isArray(obj.applicants) && obj.applicants.map(obj2 =>
-           <div className="events">{obj2.person.name}</div>
-        )} */}
+                <span
+                  style={{
+                    padding: "10px",
+                    background: "rgba(0, 0 ,0, .3)",
+                  }}
+                >
+                  {getAmountOfProjects(skill.skill) + " "}
+                  projects
+                </span>
               </div>
             </div>
             <div className="skill-icons">
