@@ -65,9 +65,6 @@ const initFeaturedProject = (projs) => {
 const Projects = () => {
   const [featuredProj, setFeaturedProj] = useState([]);
   const [randProjToShow, setRandProjToShow] = useState(6);
-  const [backgrund] = useState(
-    "https://cdn.vox-cdn.com/uploads/chorus_asset/file/22661965/img19.jpg"
-  );
   useEffect(() => {
     setFeaturedProj([
       {
@@ -120,7 +117,7 @@ const Projects = () => {
             key={proj}
             className="card"
             style={{
-              backgroundImage: `url(${backgrund})`,
+              backgroundImage: `url(${project.url})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
@@ -149,7 +146,7 @@ const Projects = () => {
                       changeBackground(image, proj);
                     }}
                     onMouseOut={() => {
-                      changeBackground(project.images[0], proj);
+                      changeBackground(project.url, proj);
                     }}
                   />
                 ))}
