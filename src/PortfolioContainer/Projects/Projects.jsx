@@ -1,94 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubAlt, faCodepen } from "@fortawesome/free-brands-svg-icons";
-import { faCompressArrowsAlt } from "@fortawesome/free-solid-svg-icons";
+// import { faCompressArrowsAlt } from "@fortawesome/free-solid-svg-icons";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import "./Projects.css";
 import projectsData from "../../ProjectsData";
-
-const initFeaturedProject = (projs) => {
-  return (
-    <>
-      {projs.map((project, i) => {
-        return (
-          <div key={i} className="container projects__container">
-            <div className="projects__content">
-              <div className="projects__content-title">
-                <h6>Featured Project</h6>
-                <h5>{project.title}</h5>
-              </div>
-              <div>
-                <p className="projects__content-desc">
-                  `{project.description}`
-                </p>
-              </div>
-              <div className="project__content-icons">
-                <a href={project.gitHref}>
-                  <FontAwesomeIcon
-                    icon={faGithubAlt}
-                    className="project__icons-icon"
-                  />
-                </a>
-                <a href={project.codepenHref}>
-                  <FontAwesomeIcon
-                    icon={faCodepen}
-                    className="project__icons-icon"
-                  />
-                </a>
-              </div>
-            </div>
-            <div className="projects__content">
-              <img src={project.imgUrl} />
-              <div className="projects__content-skills">
-                {project.tech.map((tech, i) => (
-                  <span key={i}>
-                    <FontAwesomeIcon
-                      icon={faCompressArrowsAlt}
-                      style={{
-                        fontSize: ".4rem",
-                        paddingRight: "5px",
-                      }}
-                    />
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        );
-      })}
-    </>
-  );
-};
+import skillsData from "../../SkillsData";
 
 const Projects = () => {
-  const [featuredProj, setFeaturedProj] = useState([]);
   const [randProjToShow, setRandProjToShow] = useState(6);
-  useEffect(() => {
-    setFeaturedProj([
-      {
-        title: "Spotify",
-        description:
-          "minim sint nostrud laborum adipisicing fugiat sunt sunt. Ex commodo ut Lorem id nisi mollit. In veniam sunt deserunt minim labore. Culpa sint elit sit duis cillum.",
-        gitUrl: "#",
-        codepenUrl: "#",
-        imgUrl:
-          "https://lirp.cdn-website.com/1642b823/dms3rep/multi/opt/homepage-960w.JPG",
-        tech: ["ReactJS", "TypeScript", "Python", "Node"],
-      },
-      {
-        title: "LinkedIn",
-        description:
-          "minim sint nostrud laborum adipisicing fugiat sunt sunt. Ex commodo ut Lorem id nisi mollit. In veniam sunt deserunt minim labore. Culpa sint elit sit duis cillum.",
-        gitUrl: "#",
-        codepenUrl: "#",
-        imgUrl:
-          "https://lirp.cdn-website.com/1642b823/dms3rep/multi/opt/homepage-960w.JPG",
-        tech: ["VueJs", "JavaScript", "SASS", "Angular"],
-      },
-    ]);
-  }, []);
 
   const showMore = () => {
     setRandProjToShow(projectsData.length);
@@ -96,6 +17,19 @@ const Projects = () => {
 
   const showLess = () => {
     setRandProjToShow(6);
+  };
+
+  const getSkillIcon = (tech) => {
+    return skillsData.map((skill) => {
+      if (skill.skill === tech) {
+        return (
+          <FontAwesomeIcon
+            icon={skill.icon}
+            className="skill__icons-iconSmall"
+          />
+        );
+      }
+    });
   };
 
   const changeBackground = (background, index) => {
@@ -109,7 +43,47 @@ const Projects = () => {
       <h6>04.</h6>
       <h3>Projects</h3>
 
-      {initFeaturedProject(featuredProj)}
+      {projectsData.map((featuredProj, i) => {
+        if (featuredProj.featured) {
+          return (
+            <div key={i} className="container projects__container">
+              <div className="projects__content">
+                <div className="projects__content-title">
+                  <h6>Featured Project</h6>
+                  <h5>{featuredProj.title}</h5>
+                </div>
+                <div>
+                  <p className="projects__content-desc">
+                    {featuredProj.description}
+                  </p>
+                </div>
+                <div className="project__content-icons">
+                  <a href={featuredProj.gitHref}>
+                    <FontAwesomeIcon
+                      icon={faGithubAlt}
+                      className="project__icons-icon"
+                    />
+                  </a>
+                  <a href={featuredProj.codepenHref}>
+                    <FontAwesomeIcon
+                      icon={faCodepen}
+                      className="project__icons-icon"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div className="projects__content">
+                <img src={featuredProj.url} />
+                <div className="projects__content-skills">
+                  {featuredProj.skills.map((tech) => {
+                    return <>{getSkillIcon(tech)}</>;
+                  })}
+                </div>
+              </div>
+            </div>
+          );
+        }
+      })}
 
       <div className="container cards">
         {projectsData.slice(0, randProjToShow).map((project, proj) => (
@@ -126,6 +100,15 @@ const Projects = () => {
             <div className="projects__content-title project">
               <h6>Random Project</h6>
               <h5>{project.title}</h5>
+              <div className="projects__content-skill">
+                {project.skills.map((tech, i) => {
+                  return (
+                    <div key={i} className="project-skill-icon">
+                      {getSkillIcon(tech)}
+                    </div>
+                  );
+                })}
+              </div>
               <div className="project__icons">
                 <FontAwesomeIcon
                   icon={faGithubAlt}

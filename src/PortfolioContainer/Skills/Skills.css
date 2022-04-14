@@ -148,6 +148,12 @@
   color: rgba(255,255,255, .2);
 }
 
+.skill__icons-iconSmall {
+  font-size: 1.6rem !important;
+  color: rgba(255,255,255, .2);
+  margin: 10px;
+}
+
 .skillbar {
   position: absolute;
   right: 0;
