@@ -9,7 +9,6 @@ const projectsData = [
       "https://marmotamaps.com/de/fx/wallpaper/download/faszinationen/Marmotamaps_Wallpaper_Berchtesgaden_Desktop_1920x1080.jpg",
     ],
   },
-
   {
     title: "LinkedIN",
     skills: ["HTML5"],
@@ -62,7 +61,7 @@ const projectsData = [
   },
   {
     title: "hej",
-    skills: ["martino"],
+    skills: ["Angular"],
     featured: false,
     url: "https://i.redd.it/7ppvb8uyrjj61.jpg",
     images: [
@@ -72,7 +71,7 @@ const projectsData = [
   },
   {
     title: "putte",
-    skills: ["mach"],
+    skills: ["JavaScript"],
     featured: false,
     url: "https://i.redd.it/7ppvb8uyrjj61.jpg",
     images: [

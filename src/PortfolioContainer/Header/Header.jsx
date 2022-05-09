@@ -21,8 +21,10 @@ const navItem = (anchor, number, section) => {
 };
 
 const Header = (props) => {
-  const [dayOrNight, setDayOrNight] = useState(localStorage.getItem("theme"));
   const { scrollDirection } = useScroll();
+  const [icon, setIcon] = useState(() =>
+    localStorage.getItem("THEME") === "dark" ? true : false
+  );
 
   return (
     <div
@@ -32,11 +34,11 @@ const Header = (props) => {
           ? scrollDirection === "down"
             ? {
                 visibility: "visible",
-                transition: "all 0.5s",
+                transition: "all 0.3s ease",
               }
             : {
                 visibility: "hidden",
-                transition: "all 0.5s",
+                transition: "all 0.3s ease",
                 transform: "translateY(-100%)",
               }
           : null
@@ -69,13 +71,10 @@ const Header = (props) => {
         <span
           onClick={() => {
             props.changeTheme();
-
-            JSON.parse(localStorage.getItem("theme"))
-              ? setDayOrNight("night")
-              : setDayOrNight("sun");
+            setIcon(!icon);
           }}
         >
-          {dayOrNight == "sun" ? (
+          {icon ? (
             <LightModeIcon className="header__theme-icon" />
           ) : (
             <DarkModeIcon className="header__theme-icon" />

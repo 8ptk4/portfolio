@@ -10,18 +10,18 @@ import SideSocial from "./PortfolioContainer/SideSocial/SideSocial";
 import SectionPresentation from "./PortfolioContainer/SectionPresentation/SectionPresentation";
 
 const App = () => {
-  const [theme, setTheme] = useState(JSON.parse(localStorage.getItem("theme")));
+  const [theme, setTheme] = useState(localStorage.getItem("THEME"));
 
   useEffect(() => {
-    localStorage.setItem("theme", theme);
+    localStorage.setItem("THEME", theme);
   }, [theme]);
 
   return (
     <>
-      <div className={theme ? "Layout darkmode" : "Layout lightmode"}>
+      <div className="Layout" data-theme={theme}>
         <Header
           changeTheme={() => {
-            theme ? setTheme(false) : setTheme(true);
+            setTheme(theme == "dark" ? "light" : "dark");
           }}
         />
         <SideSocial />

@@ -13,7 +13,7 @@
 }
 
 .social-icon a {
-  color: #3f5168;
+  color: var(--textColor);
 }
 
 .social-icon a:hover {
@@ -24,7 +24,7 @@
   width: 2px;
   height: 8rem;
   margin-top: 10px;
-  background-color: #3f5168;
+  background-color: var(--textColor);
 }
 
 /* Media query - Medium devices  */

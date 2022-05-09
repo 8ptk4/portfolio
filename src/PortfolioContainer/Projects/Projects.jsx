@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubAlt, faCodepen } from "@fortawesome/free-brands-svg-icons";
-// import { faCompressArrowsAlt } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import "./Projects.css";
@@ -10,6 +10,8 @@ import skillsData from "../../SkillsData";
 
 const Projects = () => {
   const [randProjToShow, setRandProjToShow] = useState(6);
+  const [projects, setProjects] = useState([]);
+  const [newArray, setNewArray] = useState([]);
 
   const showMore = () => {
     setRandProjToShow(projectsData.length);
@@ -18,6 +20,15 @@ const Projects = () => {
   const showLess = () => {
     setRandProjToShow(6);
   };
+
+  useEffect(() => {
+    setProjects([]);
+    projectsData.some((project) => {
+      if (project.skills.some((item) => newArray.includes(item))) {
+        setProjects((projects) => [...projects, project]);
+      }
+    });
+  }, [newArray]);
 
   const getSkillIcon = (tech) => {
     return skillsData.map((skill) => {
@@ -30,6 +41,18 @@ const Projects = () => {
         );
       }
     });
+  };
+
+  const addSkill = (skill) => {
+    setNewArray(newArray.filter((item) => item !== skill));
+  };
+
+  const removeSkill = (skill) => {
+    setNewArray((newArray) => [...newArray, skill]);
+  };
+
+  const testtest = (skill) => {
+    newArray.includes(skill) ? addSkill(skill) : removeSkill(skill);
   };
 
   const changeBackground = (background, index) => {
@@ -84,9 +107,35 @@ const Projects = () => {
           );
         }
       })}
+      <div
+        className="container projectsSort"
+        style={{
+          marginBottom: "20px",
+        }}
+      >
+        {skillsData.map((skill, order) => (
+          <div key={order} className="tooltipa">
+            <button
+              className="sortIcon"
+              key={order}
+              onClick={(event) => {
+                event.currentTarget.classList.toggle("projectsSortActive");
 
+                testtest(skill.skill);
+              }}
+            >
+              {getSkillIcon(skill.skill)}
+            </button>
+            <span className="tooltiptext">{skill.skill}</span>
+          </div>
+        ))}
+      </div>
+
+      {projects.length === 0 ? (
+        <h4 className="emptySkill">Toggle projects by icons above</h4>
+      ) : null}
       <div className="container cards">
-        {projectsData.slice(0, randProjToShow).map((project, proj) => (
+        {projects.slice(0, randProjToShow).map((project, proj) => (
           <div
             key={proj}
             className="card"
@@ -100,15 +149,6 @@ const Projects = () => {
             <div className="projects__content-title project">
               <h6>Random Project</h6>
               <h5>{project.title}</h5>
-              <div className="projects__content-skill">
-                {project.skills.map((tech, i) => {
-                  return (
-                    <div key={i} className="project-skill-icon">
-                      {getSkillIcon(tech)}
-                    </div>
-                  );
-                })}
-              </div>
               <div className="project__icons">
                 <FontAwesomeIcon
                   icon={faGithubAlt}
@@ -135,22 +175,43 @@ const Projects = () => {
                 ))}
               </div>
             </div>
+            <div className="projects__content-skill">
+              {project.skills.map((tech, i) => {
+                return (
+                  <div key={i} className="project-skill-icon">
+                    {newArray.includes(tech) ? (
+                      <button className="skillBtnPill skillBtnPillActive">
+                        {tech}
+                        <FontAwesomeIcon
+                          icon={faCheck}
+                          className="skillBtnPillActiveIcon"
+                        />
+                      </button>
+                    ) : (
+                      <button className="skillBtnPill">{tech}</button>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         ))}
       </div>
-      <div className="toggle__grid">
-        {randProjToShow === 6 ? (
-          <p className="toggle__grid-expand" onClick={showMore}>
-            Show More
-            <ExpandMoreIcon />
-          </p>
-        ) : (
-          <p className="toggle__grid-expand" onClick={showLess}>
-            <ExpandLessIcon />
-            Show Less
-          </p>
-        )}
-      </div>
+      {newArray.length > 5 && (
+        <div className="toggle__grid">
+          {randProjToShow === 6 ? (
+            <p className="toggle__grid-expand" onClick={showMore}>
+              Show More
+              <ExpandMoreIcon />
+            </p>
+          ) : (
+            <p className="toggle__grid-expand" onClick={showLess}>
+              <ExpandLessIcon />
+              Show Less
+            </p>
+          )}
+        </div>
+      )}
     </section>
   );
 };

@@ -7,34 +7,72 @@
 .about__me {
   width: 100%;
   aspect-ratio: 1/1;
-  border-radius: 2rem;
-  background: linear-gradient(45deg, transparent, var(--accent), transparent);
   display: grid;
   place-items: center;
 }
 
+.about__content > .text__primary {
+  color: var(--primaryColor);
+}
+
+.about__content > .text__secondary {
+  color: var(--secondaryColor);
+}
+
+.about__content > .text__main {
+  color: var(--textColor);
+}
+
+/* About Image */
+.about__image {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  opacity: .4;
+}
+
 .about__me-image {
-  border-radius: 2rem;
   overflow: hidden;
-  transform: rotate(10deg);
+}
+
+.about__image:hover {
+  opacity: 1;
   transition: var(--transition);
 }
 
-.about__me-image:hover {
-  transform: rotate(0);
+.shape-outer {
+  display: flex;
+  flex-shrink: 0;
+  margin: 25px;
+  background: var(--accent);
 }
 
-.about__content {
-  margin: 2rem 0 2.6rem;
-  color: var(--color);
+.shape-inner {
+  background: var(--secondaryColor);
+  background-size: cover;
+  margin: auto;
+}
+
+.sign-right {
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+      clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.shape-inner {
+  height: calc(100% - .5rem);
+  width: calc(100% - .5rem);
+  background-size: cover;
+  margin: auto;
 }
 
 /* Media query - Medium devices  */
 @media screen and (max-width: 1024px) {
-
   .about__container {
     grid-template-columns: 1fr;
     gap: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .about__me {
@@ -45,6 +83,11 @@
   .about__content p {
     margin: 1rem 0 1.5rem;
   }
+
+  .sign-right {
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+        clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
 }
 
 /* Media query - Small devices */
@@ -56,5 +99,10 @@
 
   .about__content p {
     margin: 1.5rem 0;
+  }
+
+  .sign-right {
+      -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+          clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
   }
 }

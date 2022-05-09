@@ -54,10 +54,13 @@ const SectionPresentation = () => {
           </div>
         </div>
 
-        <div className="presentation__me">
-          <div className="presentation__me-image">
+        <div className="presentation__me shape-outer sign-left">
+          <div className="presentation__me-image shape-inner sign-left">
             <picture>
-              <img src="https://avatars.githubusercontent.com/u/26345032?v=4" />
+              <img
+                className="presentation__image"
+                src="https://avatars.githubusercontent.com/u/26345032?v=4"
+              />
             </picture>
           </div>
         </div>

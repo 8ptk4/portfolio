@@ -17,22 +17,28 @@
   --transition: all 900ms ease;
 }
 
-.darkmode {
-  --background: #0B0C10;
-  --accent: #66FCF1;
-  --color: #C5C6C7;
-  --secondaryColor: #3f5168;
-  --cardColor: rgba(20,50,48,.7);
+[data-theme="dark"] {
+  --background: #28293D;
+  --accent: #6697FF;
+
+  --primaryColor: #b1bddb;
+  --secondaryColor: #555870;
+  --textColor: #717387;
+
+  --cardBackground: rgba(255, 255, 255, 0.1);
   --cardColorHover: rgba(20,50,48,.3);
 }
 
-.lightmode {
-  --background: #ffffff;
-  --accent: #ff0055;
-  --color: #3E3E3E;
-  --secondaryColor: gray;
-  --cardColor: rgba(62, 38, 65, 0.7);
-  --cardColorHover: rgba(255,255,255,.3);
+[data-theme="light"] {
+  --background: #f2f3ff;
+  --accent: #4179f1;
+
+  --primaryColor: #6e7685;
+  --secondaryColor: #b0b2c7;
+  --textColor: #717387;
+
+  --cardColor: rgba(0, 0, 0, 0.7);
+  --cardColorHover: rgba(20,50,48,.3);
 }
 
 html {
@@ -88,7 +94,7 @@ section > h6 {
 
 
 section > h3 {
-  color: #C5C6C7;
+  color: var(--primaryColor);
   margin-bottom: 4rem;
 }
 
@@ -148,9 +154,74 @@ footer {
   height: 70px;
 }
 
+/* Toggle Expand/Contract PROJECTS & SKILLS */
+.toggle__grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.toggle__grid > p {
+  cursor: pointer;
+  color: var(--secondaryColor);
+}
+
+.toggle__grid > p:hover {
+  cursor: pointer;
+  color: var(--accent);
+  transition: var(--transition);
+}
+
+.toggle__grid-expand {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+/* Tooltip */
+.tooltipa {
+  position: relative;
+  display: inline-block;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.tooltipa .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--secondaryColor);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 120;
+  bottom: 6.5rem;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltipa .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--secondaryColor) transparent transparent transparent;
+}
+
+.tooltipa:hover .tooltiptext {
+  visibility: visible;
+}
+
 /* Media Query - Medium devices  */
 @media screen and (max-width: 1024px) {
-
   .container {
     width: var(--container-width-md);
   }
@@ -158,12 +229,10 @@ footer {
   section {
     margin-top: 6rem;
   }
-
 }
 
 /* Media query - Small devices */
 @media screen and (max-width: 600px) {
-
   .container {
     width: var(--container-width-sm)
   }
@@ -171,5 +240,5 @@ footer {
   section > h2 {
     margin-bottom: 2rem;
   }
-
 }
+

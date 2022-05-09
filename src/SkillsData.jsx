@@ -44,18 +44,18 @@ const projectsData = [
     icon: faAngular,
     level: "20%",
   },
-  {
-    skill: "Vue",
-    iconName: "faHtml5",
-    icon: faHtml5,
-    level: "30%",
-  },
-  {
-    skill: "asdsad",
-    iconName: "faHtml5",
-    icon: faHtml5,
-    level: "90%",
-  },
+  // {
+  //   skill: "Vue",
+  //   iconName: "faHtml5",
+  //   icon: faHtml5,
+  //   level: "30%",
+  // },
+  // {
+  //   skill: "asdsad",
+  //   iconName: "faHtml5",
+  //   icon: faHtml5,
+  //   level: "90%",
+  // },
 ];
 
 export default projectsData;

@@ -18,11 +18,11 @@
   width: 2px;
   height: 45vh;
   margin-top: 10px;
-  background-color: #3f5168;
+  background-color: var(--textColor);
 }
 
 .side-mail a {
-  color: #3f5168;
+  color: var(--textColor);
   font-family: 'Roboto Mono', monospace;
   font-size: 14px;
   letter-spacing: 2px;

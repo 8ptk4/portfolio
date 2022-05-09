@@ -13,6 +13,7 @@
 .header__logo span {
   display: inline-block;
   margin-right: -10px;
+  color: var(--textColor);
 }
 
 .header__logo-initial {
@@ -22,12 +23,10 @@
   -o-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
-  color: var(--color);
 }
 
 .header__logo-latter {
   font-size: 40px;
-  color: var(--color);
 }
 
 .header__nav ul {
@@ -51,21 +50,23 @@
 }
 
 .header__nav-name {
-  color: var(--color);
+  color: var(--textColor);
 }
 
 .header__nav ul li a:hover > .header__nav-name {
   color: var(--accent);
+  transition: var(--transition);
 }
 
 .header__theme-icon {
-  color: var(--color);
+  color: var(--textColor);
   font-size: 2rem !important;
 }
 
 .header__theme-icon:hover {
   cursor: pointer;
   color: var(--accent);
+  transition: var(--transition);
 }
 
 .header__theme__secondary {
@@ -75,7 +76,7 @@
 }
 
 .header__theme__secondary-arrow {
-  color: var(--color);
+  color: var(--textColor);
 }
 
 .header__theme__secondary-animation {
@@ -84,7 +85,7 @@
 }
 
 .header__theme__secondary-text {
-  color: var(--color);
+  color: var(--textColor);
   padding: 4px;
   background-color: var(--background) !important;
   font-size: .7rem;

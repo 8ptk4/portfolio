@@ -10,10 +10,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  position: relative;
 }
 
 .projects__content-desc {
   color: var(--secondaryColor);
+}
+
+.projects__content-title > h5 {
+  color: var(--primaryColor);
 }
 
 .hejhej {
@@ -62,6 +67,11 @@ picture > img {
   .apa {
     margin: 1rem 0 1.5rem;
   }
+  .project__content-icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 /* Media query - Small devices */
@@ -69,19 +79,66 @@ picture > img {
   .projects__content p {
     margin: 1.5rem 0;
   }
+
+  .project__content-icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 .card {
   color: white;
   height: 15rem;
   border: 0;
+  z-index: 100;
 }
 
 .cards {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 3.7rem 1rem;
+}
+
+.skillBtnPill {
+  border-radius: .9rem;
+  color: white;
+  height: .5rem;
+  font-size: .8rem;
+  background: var(--secondaryColor);
+  padding: 1rem;
+  line-height: 0px;
+  border: 0;
+  display: flex;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.skillBtnPillActive {
+  color: white;
+}
+
+.skillBtnPillActiveIcon {
+  margin-left: 7px;
+  vertical-align: middle;
+  margin-top: -5px;
+  font-size: .8rem;
+}
+
+.project-skill-icon {
+  color: red !important;
+  height: 100%;
+  margin-top: 5px;
+  margin-right: 7px;
+}
+
+.project-skill-icon > svg {
+  color: white !important;
+}
+
+.projects__content-skill {
+  display: flex;
+  flex-direction: row;
 }
 
 @media (min-width: 600px) {
@@ -92,39 +149,17 @@ picture > img {
 }
 
 .project {
-  height: 100%;
+  min-height: 100%;
   top: 100%;
-  background-color: var(--cardColor);
   padding: .5rem;
+}
+
+.cardOverlay {
+  background: red;
 }
 
 .project:hover {
   background-color: var(--cardColorHover);
-}
-
-.toggle__grid {
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 2rem;
-}
-
-.toggle__grid > p {
-  cursor: pointer;
-  color: var(--accent);
-}
-
-.toggle__grid > p:hover {
-  cursor: pointer;
-  color: rosybrown;
-  transition: var(--transition);
-}
-
-.toggle__grid-expand {
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .random__project__images {
@@ -159,6 +194,8 @@ picture > img {
   left: 0;
 }
 
+
+
 .project__icons-icon {
   font-size: 3rem !important;
   margin: .5rem;
@@ -170,18 +207,35 @@ picture > img {
   cursor: pointer;
 }
 
-.project-skill-icon {
-  color: red !important;
-  height: 100%;
+.emptySkill {
+  color: var(--textColor);
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
 }
 
-.project-skill-icon > svg {
-  color: white !important;
+.sortIcon {
+  padding: 20px;
+  display: inline-block;
 }
 
-.projects__content-skill {
+.sortIcon > svg {
+  font-size: 3rem !important;
+  margin: .5rem;
+  color: var(--secondaryColor);
+}
+
+.sortIcon > svg:hover {
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.projectsSort {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+.projectsSortActive > svg {
+  color: white;
+  filter: drop-shadow(0px 0px 10px var(--accent)) drop-shadow(0px 0px 1px var(--accent));
 }
