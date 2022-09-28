@@ -125,6 +125,65 @@ picture > img {
   font-size: .8rem;
 }
 
+.patrik {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #111;
+}
+
+.patrik > ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 3px solid #000;
+  border-radius: 10px;
+  padding: 20px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 240px;
+}
+
+.patrik > ul:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .05);
+  bottom: -50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.patrik > ul > li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+  margin: 15px;
+}
+
+.patrik > ul > li > label > input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background: #101010;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .project-skill-icon {
   color: red !important;
   height: 100%;
@@ -194,8 +253,6 @@ picture > img {
   left: 0;
 }
 
-
-
 .project__icons-icon {
   font-size: 3rem !important;
   margin: .5rem;
@@ -216,6 +273,7 @@ picture > img {
 .sortIcon {
   padding: 20px;
   display: inline-block;
+  background: transparent;
 }
 
 .sortIcon > svg {

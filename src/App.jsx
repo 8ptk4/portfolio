@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "./PortfolioContainer/Header/Header";
 import Footer from "./PortfolioContainer/Footer/Footer";
-import Contact from "./PortfolioContainer/Contact/Contact";
 import About from "./PortfolioContainer/About/About";
 import Skills from "./PortfolioContainer/Skills/Skills";
 import Projects from "./PortfolioContainer/Projects/Projects";
@@ -30,7 +29,6 @@ const App = () => {
         <About />
         <Skills />
         <Projects />
-        <Contact />
         <Footer />
       </div>
     </>
